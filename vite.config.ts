@@ -6,8 +6,8 @@ import react from '@vitejs/plugin-react'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-  // GitHub project site: https://<user>.github.io/<repo>/
-  base: '/personal_website/',
+  // User/org Pages repo: served at https://unicorn-carol.github.io/
+  base: '/',
   plugins: [react()],
   build: {
     outDir: 'docs',
