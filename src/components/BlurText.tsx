@@ -16,6 +16,21 @@ type BlurTextProps = {
   stepDuration?: number
 }
 
+function isElementInViewport(el: HTMLElement, rootMargin: string): boolean {
+  const rect = el.getBoundingClientRect()
+  const margin = Number.parseFloat(rootMargin) || 0
+  const vw = window.innerWidth || document.documentElement.clientWidth
+  const vh = window.innerHeight || document.documentElement.clientHeight
+  return (
+    rect.bottom >= -margin
+    && rect.right >= -margin
+    && rect.top <= vh + margin
+    && rect.left <= vw + margin
+    && rect.width > 0
+    && rect.height > 0
+  )
+}
+
 const buildKeyframes = (
   from: Record<string, string | number>,
   steps: Array<Record<string, string | number>>,
@@ -50,6 +65,10 @@ const BlurText: FC<BlurTextProps> = ({
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    if (isElementInViewport(el, rootMargin)) {
+      setInView(true)
+      return
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
