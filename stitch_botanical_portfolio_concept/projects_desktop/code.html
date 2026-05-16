@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carol | Projects Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap");
+.paper-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA_6NWYDDzGA-gIsclskptTmIgfi4z9rEraygNJ93olT5YTxAfpPRJ97Vg33buCRM9UOjK_nnXzEoX7KbPgPLYFML8PaxzYfnxP7jAOL-s4nFBKAywtnRDjLmHkSUMAy3eCCRiw_Sh5TeGdn1Vk3giS-nZuL3s9uumJgufk9SUGd8UOYoDRMGM8o8smVQnvO8SUbbmHZnAwkE1c7j5TRiqH683HrRRVTNLMqkao-M0ynU4cj-O92es2SfLT94h-EcVotwG1wGQytFg)
+    }
+.meandering-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #757870 50%, transparent);
+    position: relative;
+    overflow: hidden
+    }
+.arch-frame {
+    clip-path: ellipse(50% 70% at 50% 70%)
+    }
+.blob-frame {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)
+    }
+.stagger-offset {
+    margin-top: 64px
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#121e16",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "primary-container": "#8c9a84",
+                        "secondary-fixed-dim": "#ffb59f",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#eee0d3",
+                        "on-error": "#ffffff",
+                        "tertiary": "#665d52",
+                        "on-secondary-fixed": "#380d02",
+                        "surface-bright": "#eefdf0",
+                        "on-secondary-container": "#793f2d",
+                        "outline-variant": "#c5c8bf",
+                        "on-tertiary-fixed": "#211a12",
+                        "on-primary-fixed-variant": "#3e4a38",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#e8f8ea",
+                        "primary": "#55624f",
+                        "surface-variant": "#d7e6d9",
+                        "surface-container-highest": "#d7e6d9",
+                        "on-surface-variant": "#444841",
+                        "on-tertiary-fixed-variant": "#4e453c",
+                        "surface-tint": "#55624f",
+                        "primary-fixed-dim": "#bccbb3",
+                        "background": "#eefdf0",
+                        "surface-container": "#e3f2e4",
+                        "on-error-container": "#93000a",
+                        "outline": "#757870",
+                        "on-surface": "#121e16",
+                        "tertiary-container": "#9f9488",
+                        "secondary": "#8b4e3b",
+                        "inverse-primary": "#bccbb3",
+                        "surface-dim": "#cfded1",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fdad96",
+                        "inverse-on-surface": "#e6f5e7",
+                        "surface-container-high": "#ddecdf",
+                        "on-primary-container": "#263221",
+                        "on-secondary-fixed-variant": "#6f3726",
+                        "inverse-surface": "#26332b",
+                        "secondary-fixed": "#ffdbd1",
+                        "primary-fixed": "#d8e7ce",
+                        "tertiary-fixed-dim": "#d1c4b8",
+                        "surface": "#eefdf0",
+                        "on-tertiary-container": "#342d24",
+                        "on-primary-fixed": "#131e0f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Source Sans Three"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-sm": ["Source Sans Three"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Source Sans Three"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md selection:bg-secondary/30">
+<div class="paper-grain"></div>
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 backdrop-blur-xl bg-surface/80">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/10 p-2 rounded-full transition-all">menu</button>
+<span class="font-display-lg text-headline-md text-primary tracking-tighter">Carol</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-primary font-bold border-b-2 border-primary" href="#">Projects</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/10 p-2 rounded-full transition-all">translate</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Page Header -->
+<div class="mb-section-gap">
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-4">Curated Projects</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A collection of intentional digital experiences where ethics, aesthetics, and user-centric systems converge.</p>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap items-center gap-4 mb-16">
+<button class="px-8 py-3 rounded-full bg-primary-container text-on-primary-container font-bold shadow-sm">All Work</button>
+<button class="px-8 py-3 rounded-full border-1.5 border-outline text-on-surface-variant hover:bg-surface-container-high transition-all">Product Design</button>
+<button class="px-8 py-3 rounded-full border-1.5 border-outline text-on-surface-variant hover:bg-surface-container-high transition-all">Frontend</button>
+<button class="px-8 py-3 rounded-full border-1.5 border-outline text-on-surface-variant hover:bg-surface-container-high transition-all">Research</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<div class="flex flex-col group">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-8 mb-6">
+<div class="arch-frame w-full aspect-[4/5] bg-tertiary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist architectural detail of an archway carved from soft beige sandstone, reflecting warm golden sunlight and casting soft, long shadows. The composition is clean and editorial, emphasizing the texture of the stone against a clear, deep blue sky. The mood is serene and sophisticated, aligned with a sustainable luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBdC5aGJlM6fxl3mI_wxvl7W8YpCKXjjkFXjpBhAO6CIVdNMR7-Zbo6Q2GwjEHH28P9EmFhLCB80m9WHmqa7CaovoKAuCAN-sik3gtsJNhVPDhTXyTdlrbr7bpcdThjL_41MpnV602opQx5hYTUL0duM9Mk6MWsfsZmha3MhFjR_uG1CfBgsYhny6qVcqg0G8KFiecBpdVRRRFU7CzytNy6JlM5D0chnksIjyu-1cFhjhCUuCzlDueOpprk7eTIqYDkQO3SozE49A"/>
+</div>
+</div>
+<div class="px-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-2 block">Product Design • 2024</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-3">Ethereal Commerce</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">A high-end retail experience for sustainable textiles focused on tactile digital interactions.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">UX Research</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">Shopify</span>
+</div>
+</div>
+</div>
+<!-- Project 2 (Staggered) -->
+<div class="flex flex-col group lg:stagger-offset">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-8 mb-6">
+<div class="blob-frame w-full aspect-[4/5] bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract macro photography of a blooming floral pattern with organic, flowing lines and soft green textures. The lighting is diffused and ethereal, reminiscent of a misty morning in a forest. The colors are muted sages and warm terracottas, creating a tactile and calming visual narrative suitable for a high-end design portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJGAIZls6mDSV1Eu1hbMtM4IKAefktpOVATXOC7T0838s5GM5qxpXdz-vO6dczEQoQfIMuRd4DY1oK78ZneBNvsq4-Nldw1KBtNog57wNrVLZKUT4RFvW1nnVPKvnUOu9oOg9jE5GrIDYnW-oxjbgnom12TZMfc4SS0BX0K3YfcPebe7_OnZmNJ6m5Uci_GiTK2goVh8fpDhicAOPuB2oCa77NspO43zwwd2MzPZzvpVUVPpV19TR6iSSrB0VNEKsTEngmALXRd90"/>
+</div>
+</div>
+<div class="px-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-2 block">Research • 2023</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-3">Biophilic Systems</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Examining the psychological impact of natural patterns in dashboard design ecosystems.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">Cognitive Science</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">Data Viz</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="flex flex-col group">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-8 mb-6">
+<div class="arch-frame w-full aspect-[4/5] bg-secondary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A serene landscape captured through a minimalist lens, showing rolling hills blanketed in a soft mountain mist during the blue hour. The horizon is barely visible, blending the earth with the sky in a seamless gradient of tranquil cool tones. The composition is expansive and peaceful, embodying the quiet intentionality of modern tactile design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtJ9n1m6dpcLWrYp6OP1tHsy1ax0LeXmhqmwAaPztKLWDgGXe3FZvljGypPL8S2-howuc5DwlPLnOuzgrVQ-6YN2LkOd-ep7QLVn2giOWO5JEEkD8Dmo2OL9Wvh9odJN_dtvXu_dYiAa8gKODURQtTsEtrp51Ra2bmSP505UMTuHccfNuHN97G6uxsW40SiodRQ0qQ8J0BwD068HYNm2UJ9M20mX0YpanvbuiO-fT1HqakPZYXDl9tv-Ru99jtLCCMfAvQwkAxDuY"/>
+</div>
+</div>
+<div class="px-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-2 block">Frontend • 2024</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-3">Lumina Framework</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">A React-based component library prioritizing accessibility and motion fluidity.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">Tailwind</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">TypeScript</span>
+</div>
+</div>
+</div>
+<!-- Project 4 (Staggered) -->
+<div class="flex flex-col group lg:stagger-offset">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-8 mb-6">
+<div class="blob-frame w-full aspect-[4/5] bg-tertiary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A vertical shot looking up through a canopy of ancient trees, with sunlight filtering through the dense green leaves in sharp rays. The play of light and shadow creates a complex, organic pattern on the forest floor. The image is rich in natural detail and evokes a sense of timeless warmth and ecological connection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-NIEBTeDDKZNc7kMFsEQ-PYfOLzRvz5qI6NhNDMLgFOg8aRhps0dUTBOps3LVDyjcpD89qp8LDnxdd1wkxY6kZT0s388y2lfG1uxGox2fLDQPQzqsbMzYAAWET3syn3g_6YM3j24BAQjMXBe4hEVXRHfdhQpGksHqp82N7Pw9cGDVpNEPDuRVYA-0Hk0tmuzohZHfixI0xtkzJoKCgjNvyA7Kiux7AT-8VZ0sAS3Cta8j6otTGFtxbVlqp--kDP-FRsqqo5dvOdY"/>
+</div>
+</div>
+<div class="px-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-2 block">Product Design • 2023</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-3">Rooted Identity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Brand strategy and digital presence for a vertical farming initiative in urban spaces.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">Branding</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">Sustainability</span>
+</div>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="flex flex-col group">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-8 mb-6">
+<div class="arch-frame w-full aspect-[4/5] bg-surface-variant flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up of handmade artisanal paper showing the raw, deckled edges and the intricate fiber texture. The paper is laid out on a light stone surface under soft, natural side-lighting that highlights the physical 'tooth' of the material. The scene is minimal and emphasizes craft, tactile quality, and organic simplicity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjemYfmU4u8rp2yRJNJgDUB_H4LsJsBM_dcqjU_rHgivk54i1Ec_Nq0hXAQF3GJHkyINq1JHwjlRPhAYV3e5UGfWzk5-d2HO0QpmDxQQlPJF1QN49QIfQqZh3_48sQVSXl4SE0ZbKuIzhEvMATSr-rDemyw5_9WciuxpGoR6hPGPiwkNATwGjNTli7H79zX3V6bXCgIc_WZDRkPspEa_1Cej9luFewmkikY3drVwSia7Tlw5yI32aZh8L2dhc7m608KFDln2KJfU4"/>
+</div>
+</div>
+<div class="px-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-2 block">Frontend • 2022</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-3">Canvas Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Experimental WebGL implementation of physical paper textures in browser interfaces.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">WebGL</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">Creative Coding</span>
+</div>
+</div>
+</div>
+<!-- Project 6 (Staggered) -->
+<div class="flex flex-col group lg:stagger-offset">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-8 mb-6">
+<div class="blob-frame w-full aspect-[4/5] bg-on-secondary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A breathtaking view of a mountain lake at dawn, reflecting the jagged peaks of a snow-capped range. The water is perfectly still, acting as a mirror for the pastel pinks and oranges of the sunrise. The environment is pristine and quiet, symbolizing the balance between rugged natural power and refined, tranquil aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIvCDA2hyPKJaE3NqfWCCJKRCfNHnyoJ342onW-7pkO0nnlantFRORa6-NMLE_5aaZy5epRte8tVzsU4UrItA1X4JZXVCTojRWOGxRe3HeZQHHobEtOLoEM1aIa3s1HK8UoRj3mMGT9uCSSRHsti48QW4mD_8Wi1nykVUxsEWwkV1cfP_3StTYi9UTzY_BRTS5PgTYWljkVh30nE2Nevcz6UiwRAqYnT7S4NYE36UCCcnRJKpG8Q6cyYSuetK-kyVjwhFNru34AQs"/>
+</div>
+</div>
+<div class="px-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-2 block">Research • 2024</span>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-3">Ethical AI Patterns</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Framework for designing transparent AI agents that respect human cognitive load.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">AI Ethics</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant text-xs">HCI</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Meandering Divider -->
+<div class="mt-section-gap py-12">
+<div class="meandering-line"></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full mt-section-gap border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-display-lg text-headline-sm text-primary">Carol</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Carol. Lifelong Learner.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all" href="#">Xiaohongshu</a>
+<a class="font-body-md text-body-md text-primary underline decoration-wavy hover:translate-y-[-2px] transition-all" href="#">Back to Top</a>
+</div>
+</div>
+</footer>
+</body></html>

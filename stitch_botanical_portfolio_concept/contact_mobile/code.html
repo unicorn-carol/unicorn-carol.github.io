@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb59f",
+                    "tertiary": "#665d52",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#e8f8ea",
+                    "surface-tint": "#55624f",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#793f2d",
+                    "surface-container": "#e3f2e4",
+                    "on-secondary-fixed-variant": "#6f3726",
+                    "tertiary-fixed": "#eee0d3",
+                    "background": "#eefdf0",
+                    "primary-fixed-dim": "#bccbb3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#380d02",
+                    "on-surface": "#121e16",
+                    "secondary-container": "#fdad96",
+                    "on-tertiary-fixed-variant": "#4e453c",
+                    "on-tertiary-container": "#342d24",
+                    "primary-fixed": "#d8e7ce",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#9f9488",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#444841",
+                    "inverse-on-surface": "#e6f5e7",
+                    "on-secondary": "#ffffff",
+                    "primary": "#55624f",
+                    "outline-variant": "#c5c8bf",
+                    "tertiary-fixed-dim": "#d1c4b8",
+                    "secondary": "#8b4e3b",
+                    "on-primary-container": "#263221",
+                    "surface-container-highest": "#d7e6d9",
+                    "surface-bright": "#eefdf0",
+                    "primary-container": "#8c9a84",
+                    "on-tertiary-fixed": "#211a12",
+                    "on-background": "#121e16",
+                    "surface-dim": "#cfded1",
+                    "outline": "#757870",
+                    "inverse-primary": "#bccbb3",
+                    "surface": "#eefdf0",
+                    "surface-variant": "#d7e6d9",
+                    "secondary-fixed": "#ffdbd1",
+                    "inverse-surface": "#26332b",
+                    "on-primary-fixed": "#131e0f",
+                    "surface-container-high": "#ddecdf",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#3e4a38"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "section-gap": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Source Sans 3"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Source Sans 3"],
+                    "body-md": ["Source Sans 3"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.paper-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDlIrkwDFgXgMh84_erCM9eyk8E7LcYAwGiLeaX2xk5JQvTchV5cy8hWz8KdB9amqcZvnv6eJ1fmI-ZzUxmlhDnxDOtSk66SZop2FhYyAfRJJot-Mlx2sYrqJNa6JrkVWMA_tMVF__qiWuuhVNHdAYFj5NUfDZTnESJeplSBZ-cgf02GqHIB8rueumaSHtRmBMf5ICLcdhCB9FCnpNyqN-q9uSW0tzjKwXKyO2n1tR3sEUtNyOp2fs9gNRBPtPDNwvOGXUN6TTSz5U)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24
+    }
+.meandering-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c5c8bf 50%, transparent);
+    width: 100%;
+    position: relative
+    }
+.arch-mask {
+    clip-path: ellipse(50% 100% at 50% 100%)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<div class="paper-grain"></div>
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="menu">menu</span>
+<span class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter">Carol</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant dark:text-outline hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant dark:text-outline hover:text-primary transition-colors" href="#">Projects</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant dark:text-outline hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary" href="#">Contact</a>
+</nav>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="translate">translate</span>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left Side: Editorial Content -->
+<div class="md:col-span-5 space-y-12">
+<div class="space-y-6">
+<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary">Get in Touch</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Let’s sow the seeds of something beautiful.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        Whether you have a specific inquiry or simply wish to discuss sustainable design, I welcome your message with intentional warmth.
+                    </p>
+</div>
+<div class="meandering-line"></div>
+<!-- Quick Links: Social Row -->
+<div class="space-y-4">
+<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-tertiary">Quick Links</span>
+<div class="flex gap-6">
+<a class="flex items-center gap-2 group transition-all duration-300 hover:translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="link">link</span>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">LinkedIn</span>
+</a>
+<a class="flex items-center gap-2 group transition-all duration-300 hover:translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="code">code</span>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">GitHub</span>
+</a>
+<a class="flex items-center gap-2 group transition-all duration-300 hover:translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="photo_camera">photo_camera</span>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Xiaohongshu</span>
+</a>
+</div>
+</div>
+<!-- Aesthetic Arch Placeholder -->
+<div class="hidden md:block pt-8">
+<div class="w-full h-80 rounded-t-full bg-surface-container overflow-hidden">
+<img alt="Abstract botanical" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A serene, high-end editorial photograph of a single translucent wildflower stem against a soft, textured paper background. The lighting is diffused and natural, casting delicate, elongated shadows that evoke a calm afternoon atmosphere. The color palette is composed of muted sage greens, warm creams, and earthy terracotta tones, maintaining a minimalist and organic aesthetic consistent with luxury sustainable design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUeJcc0nUjL8xQcltdBUV2Q3icq-3Rt4rpkVhodiD_4VzeN9cktd9YwTa3bXVIE8PkJOtKjOSzZQZDPh-pDBO-BPLXnXkCf0tPWGBH51loPJMvFuWsYMPNVzpI7iKvY-FS6Wcuqfd0UjYN1MGm63ZPXpa00un0TJJilYwNv5_aIeLHF-1TlQKp8Ui3nhOlCCc9pSCzJs3UB8buP7zqqkH8xzL_eCAmrA1e0ddsrcod8K8Wm0hYR9FO1vw-GoOT1wRgMAADFDJGgDc"/>
+</div>
+</div>
+</div>
+<!-- Right Side: Inquiry Form -->
+<div class="md:col-start-7 md:col-span-6 mt-12 md:mt-0">
+<div class="bg-surface-container-lowest/50 backdrop-blur-sm p-8 md:p-12 rounded-lg border border-outline-variant/30 shadow-sm">
+<form class="space-y-8">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-tertiary block px-2">Name</label>
+<input class="w-full bg-surface-container-low/40 border-b border-outline-variant focus:border-primary focus:ring-0 px-4 py-4 rounded-t-lg transition-all outline-none font-body-md" placeholder="Your full name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-tertiary block px-2">Email</label>
+<input class="w-full bg-surface-container-low/40 border-b border-outline-variant focus:border-primary focus:ring-0 px-4 py-4 rounded-t-lg transition-all outline-none font-body-md" placeholder="your@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-tertiary block px-2">Message</label>
+<textarea class="w-full bg-surface-container-low/40 border-b border-outline-variant focus:border-primary focus:ring-0 px-4 py-4 rounded-t-lg transition-all outline-none font-body-md resize-none" placeholder="How can I help you?" rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-4 rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:bg-on-primary-fixed-variant transition-all transform active:scale-95 duration-200 shadow-lg shadow-primary/10" type="submit">
+                            Send Message
+                        </button>
+</form>
+<div class="mt-12 flex items-start gap-4 p-6 bg-primary-container/10 rounded-lg border border-primary-container/20">
+<span class="material-symbols-outlined text-primary" data-icon="spa">spa</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                            "The best time to plant a tree was 20 years ago. The second best time is now."
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant/20 w-full mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-display-lg text-headline-sm text-primary">Carol</span>
+<p class="font-body-md text-body-md text-tertiary dark:text-tertiary-fixed-dim">© 2024 Carol. Lifelong Learner.</p>
+</div>
+<nav class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all hover:translate-y-[-2px]" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all hover:translate-y-[-2px]" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all hover:translate-y-[-2px]" href="#">Xiaohongshu</a>
+</nav>
+<button class="flex items-center gap-2 font-label-sm text-label-sm tracking-[0.15em] uppercase text-primary hover:underline decoration-wavy transition-all" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                Back to Top
+                <span class="material-symbols-outlined text-[16px]" data-icon="north">north</span>
+</button>
+</div>
+</footer>
+</body></html>

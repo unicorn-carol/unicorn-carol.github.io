@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Source+Sans+Three:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb59f",
+                    "tertiary": "#665d52",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#e8f8ea",
+                    "surface-tint": "#55624f",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#793f2d",
+                    "surface-container": "#e3f2e4",
+                    "on-secondary-fixed-variant": "#6f3726",
+                    "tertiary-fixed": "#eee0d3",
+                    "background": "#eefdf0",
+                    "primary-fixed-dim": "#bccbb3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#380d02",
+                    "on-surface": "#121e16",
+                    "secondary-container": "#fdad96",
+                    "on-tertiary-fixed-variant": "#4e453c",
+                    "on-tertiary-container": "#342d24",
+                    "primary-fixed": "#d8e7ce",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#9f9488",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#444841",
+                    "inverse-on-surface": "#e6f5e7",
+                    "on-secondary": "#ffffff",
+                    "primary": "#55624f",
+                    "outline-variant": "#c5c8bf",
+                    "tertiary-fixed-dim": "#d1c4b8",
+                    "secondary": "#8b4e3b",
+                    "on-primary-container": "#263221",
+                    "surface-container-highest": "#d7e6d9",
+                    "surface-bright": "#eefdf0",
+                    "primary-container": "#8c9a84",
+                    "on-tertiary-fixed": "#211a12",
+                    "on-background": "#121e16",
+                    "surface-dim": "#cfded1",
+                    "outline": "#757870",
+                    "inverse-primary": "#bccbb3",
+                    "surface": "#eefdf0",
+                    "surface-variant": "#d7e6d9",
+                    "secondary-fixed": "#ffdbd1",
+                    "inverse-surface": "#26332b",
+                    "on-primary-fixed": "#131e0f",
+                    "surface-container-high": "#ddecdf",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#3e4a38"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "section-gap": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Source Sans Three"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Source Sans Three"],
+                    "body-md": ["Source Sans Three"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.paper-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCZdsvh9Y2D-FbFDbQhvm7MACKdf_JEQEofIH4BeykeWpIxHHJYLu4lIaxn-FxHd7FwN9v-sKASojMB0Wrr9fD6i_km8wHo7RuDdMJ_f9gwZj7h_fAucVu7Z3Yl8VZPNisW3DALXOHUJ3RY18MTcxPdVMUJg0Fl3igNa1wH2ceClvNzr9AAWM9k40XWq-zrGDpQ6iUkRj5i6FoizS2ToX2d5K6EJleDsjf1GZI-qQB91KmqTuWDSKfGZmeL_vGzFTstvMTReZJG-Nw)
+    }
+.organic-blob-1 {
+    clip-path: url(#blob1)
+    }
+.organic-blob-2 {
+    clip-path: url(#blob2)
+    }
+.organic-blob-3 {
+    clip-path: url(#blob3)
+    }
+.meandering-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, theme("colors.outline-variant"), transparent);
+    position: relative
+    }
+.custom-shadow {
+    box-shadow: 0 20px 40px -15px rgba(45, 58, 49, 0.08)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<div class="paper-grain"></div>
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-xl">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-display-lg text-headline-md text-primary tracking-tighter">Carol</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-primary font-bold border-b-2 border-primary" href="#">Projects</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Insights</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="translate">translate</span>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Page Title & Header -->
+<section class="mb-section-gap">
+<p class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary mb-4">Portfolio</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Selected Works</h1>
+<!-- Filter Pills -->
+<div class="flex overflow-x-auto gap-3 pb-4 no-scrollbar -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<button class="whitespace-nowrap px-8 py-3 rounded-full bg-secondary text-on-primary font-body-md hover:scale-95 transition-all">All Projects</button>
+<button class="whitespace-nowrap px-8 py-3 rounded-full border-[1.5px] border-primary text-primary font-body-md hover:bg-primary-container/10 transition-all">Product Design</button>
+<button class="whitespace-nowrap px-8 py-3 rounded-full border-[1.5px] border-primary text-primary font-body-md hover:bg-primary-container/10 transition-all">Frontend</button>
+<button class="whitespace-nowrap px-8 py-3 rounded-full border-[1.5px] border-primary text-primary font-body-md hover:bg-primary-container/10 transition-all">Research</button>
+</div>
+</section>
+<!-- Staggered Project Grid -->
+<section class="flex flex-col gap-section-gap">
+<!-- Project 01 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 group">
+<div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
+<img alt="Digital Landscape" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="An ethereal and abstract landscape featuring rolling hills of soft terracotta clay under a sage green sky. The lighting is diffused and warm, evoking a sense of calm and organic sustainability. The visual style is minimalist yet tactile, with subtle paper grain textures throughout the composition, aligning perfectly with a high-end luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCMSoGCD0O-TnI093xuPxMCD9htxbdqBBNu69oXnBt7Du3lDwHwQy5aPyN3KqoWCtqcdIjRaFyvzhQRxN6dMqzdw8DAU2cYI7cMwAVXFmLKQ69bLVFPULdELnQmgXzUCidOJxocmiV7onUXrjGZvHR8zm4cUfJtwoxGbH6QuCfVSiikYq3NPk8bvGmDhPCBzsFcDw6AxKtV2UjjcCjsDvPNl97EFbNreaHcayxgmRPEfscAqJGhBI_GE8pAGyvlIkL1tswivRkT18"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+</div>
+<div class="md:col-span-5 md:pl-12 flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-tertiary mb-2">2024 • Product Design</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Verdant Systems</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">A deep dive into sustainable interaction models for carbon-tracking ecosystems in corporate environments.</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">Figma</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">React</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">Tailwind</span>
+</div>
+<button class="w-fit px-8 py-4 bg-secondary text-on-primary rounded-full font-body-md hover:translate-y-[-2px] custom-shadow transition-all">View Case Study</button>
+</div>
+</div>
+<!-- Meandering Line Divider -->
+<div class="meandering-line"></div>
+<!-- Project 02 (Reversed / Staggered) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 md:order-1 order-2 md:pr-12 flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-tertiary mb-2">2023 • Frontend Development</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Alabaster Gallery</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Redefining digital art exhibition through immersive, high-performance web experiences with smooth narrative pacing.</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">Next.js</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">Three.js</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">GSAP</span>
+</div>
+<button class="w-fit px-8 py-4 border-[1.5px] border-secondary text-secondary rounded-full font-body-md hover:bg-secondary-fixed/20 transition-all">View Case Study</button>
+</div>
+<div class="md:col-span-7 md:order-2 order-1 group mt-12 md:mt-0">
+<div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
+<img alt="Soft Textures" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="Close-up of natural stone textures with soft shadows falling across the surface. The palette is dominated by off-white alabaster and soft grey stone tones. The lighting is bright and airy, suggesting a high-end gallery space. The mood is sophisticated and quiet, emphasizing the tactile quality of organic materials in a minimalist digital frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7sQdMNhi7s2tIxTOzHC_FTgrHv9oT18pBG0WYcGkenBtgeR-WoVyS9qiiO_xVy2sZy-ClFyUG0twtegG2yDRUCTEFboRTYBtouWEFWqIOfmmiC8YqjR8xb8VQn2AxI0ABNN77oFbDgM7DfnCSejs8GnVTla74dV8xLpBirqspGIjopGAo29qGcuGM92F0GwZjrazwV1VSOEmWl3cVgCKufm3vtTR3HKrx6y2OyusXU56gztPpZM8N8_MrZyTTTCWDK0aCFYLVB_Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/10 to-transparent"></div>
+</div>
+</div>
+</div>
+<div class="meandering-line"></div>
+<!-- Project 03 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 group">
+<div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
+<img alt="Nature Landscape" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="An abstract botanical motif featuring silhouettes of wild ferns against a soft clay-colored background. The composition is asymmetrical and balanced, using a palette of deep forest green and soft terracotta. The lighting feels like early morning mist in a serene garden. The visual style is rooted in editorial design, with expansive whitespace and a focus on natural, organic shapes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH6SUJLY1Qy6mxFWy8F9_1HPKr_UBa3XWcTZf5EGyFC8TNK1_ghOxHhiX45o4JwPzz7xrtC_xvE5-tdb7G2c-JsDsf9dICiw7Idyf38Lvd0XoFSr0El3LhoDcNVI9S6wWC7K6HwayhMw5dgNYx13YrWVvqNR1PLR3eCGWds6RoCnhRUdewMu5OHdbZhIzSED7OAuYNMiAT49bgRekNLdH6b54KxN1xXNxcLQQZEBS7vAuCz0o6KlP-faIDrpK_1-6qvaBPdUi8w6U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+</div>
+<div class="md:col-span-5 md:pl-12 flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-tertiary mb-2">2023 • Research</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Tactile Interfaces</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Investigating how physical textures and paper-like qualities in digital UI affect user focus and retention.</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">User Research</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full uppercase tracking-wider">Psychology</span>
+</div>
+<button class="w-fit px-8 py-4 bg-secondary text-on-primary rounded-full font-body-md hover:translate-y-[-2px] custom-shadow transition-all">View Whitepaper</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-display-lg text-headline-sm text-primary">Carol</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Carol. Lifelong Learner.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all" href="#">Xiaohongshu</a>
+<a class="font-body-md text-body-md text-primary underline decoration-wavy hover:translate-y-[-2px] transition-all" href="#">Back to Top</a>
+</div>
+</div>
+</footer>
+<!-- SVG Blob definitions (used via clip-path if needed for more complex blob frames) -->
+<svg height="0" width="0">
+<defs>
+<clippath clippathunits="objectBoundingBox" id="blob1">
+<path d="M0.9,0.5 C0.9,0.7 0.7,0.9 0.5,0.9 C0.3,0.9 0.1,0.7 0.1,0.5 C0.1,0.3 0.3,0.1 0.5,0.1 C0.7,0.1 0.9,0.3 0.9,0.5"></path>
+</clippath>
+</defs>
+</svg>
+</body></html>

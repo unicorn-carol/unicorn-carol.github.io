@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Source+Sans+Three:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb59f",
+                    "tertiary": "#665d52",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#e8f8ea",
+                    "surface-tint": "#55624f",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#793f2d",
+                    "surface-container": "#e3f2e4",
+                    "on-secondary-fixed-variant": "#6f3726",
+                    "tertiary-fixed": "#eee0d3",
+                    "background": "#eefdf0",
+                    "primary-fixed-dim": "#bccbb3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#380d02",
+                    "on-surface": "#121e16",
+                    "secondary-container": "#fdad96",
+                    "on-tertiary-fixed-variant": "#4e453c",
+                    "on-tertiary-container": "#342d24",
+                    "primary-fixed": "#d8e7ce",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#9f9488",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#444841",
+                    "inverse-on-surface": "#e6f5e7",
+                    "on-secondary": "#ffffff",
+                    "primary": "#55624f",
+                    "outline-variant": "#c5c8bf",
+                    "tertiary-fixed-dim": "#d1c4b8",
+                    "secondary": "#8b4e3b",
+                    "on-primary-container": "#263221",
+                    "surface-container-highest": "#d7e6d9",
+                    "surface-bright": "#eefdf0",
+                    "primary-container": "#8c9a84",
+                    "on-tertiary-fixed": "#211a12",
+                    "on-background": "#121e16",
+                    "surface-dim": "#cfded1",
+                    "outline": "#757870",
+                    "inverse-primary": "#bccbb3",
+                    "surface": "#eefdf0",
+                    "surface-variant": "#d7e6d9",
+                    "secondary-fixed": "#ffdbd1",
+                    "inverse-surface": "#26332b",
+                    "on-primary-fixed": "#131e0f",
+                    "surface-container-high": "#ddecdf",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#3e4a38"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "section-gap": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Source Sans Three"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Source Sans Three"],
+                    "body-md": ["Source Sans Three"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>body {
+    background-color: #eefdf0;
+    position: relative
+    }
+/* Paper Grain Overlay */
+.paper-grain::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.04;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuApX5uewyJLbHIuPtYIkdiAzrIIBWnQ1igB3nejzwoFieYPcm8-OuBMjXT7a-rtz8jwKiGXamc6ptwUHqOxzZwigeDF3to8j0vLpjKg7jytmon1E15ROfDaxt72kwaQBjSksQD4K3jR1G_aA4rNG4Y4fuvWKhhZb_UZgQwl9uoUG8k--F84ueAEBn-nG3GYMNuexv3ld13LWoWW7ohlY-zzSIswZ-hAecpy_cGbFugkhf5nCiv1I_PRDKypl8cGFxowzvpRavPElLo)
+    }
+/* Meandering Vine Divider */
+.vine-divider {
+    height: 100px;
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='1280' height='100' viewBox='0 0 1280 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50C150 20 300 80 450 50C600 20 750 80 900 50C1050 20 1200 80 1280 50' stroke='%2355624F' stroke-opacity='0.2' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center
+    }
+/* Custom radio concentric design */
+.concentric-circle {
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid #55624f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    }
+.concentric-circle::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #55624f;
+    border-radius: 50%
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="paper-grain text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 backdrop-blur-[20px] bg-surface/80 dark:bg-surface-dim/80">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-200">menu</span>
+<span class="font-display-lg text-headline-md text-primary tracking-tighter">Carol</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Projects</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-primary font-bold border-b-2 border-primary" href="#">About</a>
+<a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Insights</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-200">translate</span>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Bio Section -->
+<section class="mt-16 md:mt-32 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">Crafting digital experiences with <span class="italic font-normal">intentionality</span> and warmth.</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Based at the intersection of nature and technology, Carol is a designer and strategist dedicated to sustainable luxury. My approach is rooted in the belief that digital spaces should feel as tactile and calming as a physical atelier.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Every project begins with a story. Whether designing high-end editorial platforms or complex service ecosystems, I prioritize slow design—creating interfaces that invite absorption rather than distraction.
+                    </p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col justify-end">
+<div class="aspect-[4/5] rounded-xl bg-surface-variant/50 overflow-hidden relative border border-outline-variant/30">
+<img alt="Botanical Texture" class="w-full h-full object-cover grayscale opacity-80" data-alt="A high-end, minimalist macro photograph of a single dried botanical leaf against a textured alabaster background. The lighting is soft and diffused, creating subtle shadows that emphasize the organic veins of the leaf. The color palette is composed of muted earth tones and soft whites, evoking a sense of sustainable luxury and calm intentionality. The overall aesthetic is refined and editorial, mirroring the tactile paper-grain texture of the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4X5Qa_SJrxb9svYB2hkqjCU6NIPsrKSK5C9FqSw2DFVB3hvV2TjzVGH_A_NrLh-D7vZSVQ3vL1C7F1bqct310e6dvi6IEFvpRK0CurK1_DIKzzgUYrDnwPIkTB-diDe3H72GU5TnxWCU_U5HQjfAxRJrzmf1lb43u40T9sdmEXfVANRqz9tGIb4hKi1bm36cPFQGyq-A7tIJfNJBGoGE4aZFyTonkDv3uclALj9kLMQhmh475O-Er9omMZU-PWEZQwUErtEQNRbo"/>
+<div class="absolute inset-0 bg-primary/10 backdrop-overlay"></div>
+</div>
+</div>
+</section>
+<div class="vine-divider my-section-gap"></div>
+<!-- Experience Timeline -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-primary mb-4 block">The Journey</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">Evolution of Craft</h2>
+</div>
+<div class="md:col-span-8 space-y-16">
+<!-- Timeline Item 1 -->
+<div class="flex gap-8 md:gap-16 group">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-headline-md text-primary font-bold">2024</span>
+<div class="w-px h-full bg-outline-variant/40 mt-4 group-last:hidden"></div>
+</div>
+<div class="pb-12">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Senior Design Strategist</h3>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-4">Leaf &amp; Stone Studio</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Leading the digital transformation of sustainable luxury brands. Focusing on eco-conscious design systems and ethical interaction patterns that reduce digital carbon footprints while maintaining high-end aesthetics.</p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="flex gap-8 md:gap-16 group">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-headline-md text-on-surface-variant">2021</span>
+<div class="w-px h-full bg-outline-variant/40 mt-4 group-last:hidden"></div>
+</div>
+<div class="pb-12">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">UX Architect</h3>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-4">The Editorial Collective</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Redefined the reading experience for premium digital publications. Integrated motion and typography to create a seamless, tactile feel across device types.</p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="flex gap-8 md:gap-16 group">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-headline-md text-on-surface-variant">2018</span>
+<div class="w-px h-full bg-outline-variant/40 mt-4 group-last:hidden"></div>
+</div>
+<div class="pb-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Visual Designer</h3>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-4">Bloom Agency</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Developed visual identities for boutique firms in the art and culture sector. Specialized in minimalist layouts and bespoke brand guidelines.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="vine-divider my-section-gap"></div>
+<!-- Skill Stack Section -->
+<section class="pb-section-gap">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-primary mb-4 block">Toolbox</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Skill Stack</h2>
+</div>
+<div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+<!-- Group 1: Strategic -->
+<div class="p-8 rounded-lg bg-surface-container border border-outline-variant/20 flex flex-col items-center gap-4 hover:shadow-xl transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary text-4xl">architecture</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Strategic</h4>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-4 py-2 bg-primary-container/20 text-on-primary-container rounded-full font-label-sm text-label-sm uppercase">Design Thinking</span>
+<span class="px-4 py-2 bg-primary-container/20 text-on-primary-container rounded-full font-label-sm text-label-sm uppercase">Brand Audit</span>
+<span class="px-4 py-2 bg-primary-container/20 text-on-primary-container rounded-full font-label-sm text-label-sm uppercase">Sustainability</span>
+</div>
+</div>
+<!-- Group 2: Creative -->
+<div class="p-8 rounded-lg bg-surface-container-high border border-outline-variant/20 flex flex-col items-center gap-4 hover:shadow-xl transition-shadow duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl">brush</span>
+<h4 class="font-headline-sm text-headline-sm text-secondary">Creative</h4>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-4 py-2 bg-secondary-container/20 text-on-secondary-container rounded-full font-label-sm text-label-sm uppercase">Art Direction</span>
+<span class="px-4 py-2 bg-secondary-container/20 text-on-secondary-container rounded-full font-label-sm text-label-sm uppercase">Typography</span>
+<span class="px-4 py-2 bg-secondary-container/20 text-on-secondary-container rounded-full font-label-sm text-label-sm uppercase">Editorial</span>
+</div>
+</div>
+<!-- Group 3: Technical -->
+<div class="p-8 rounded-lg bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center gap-4 hover:shadow-xl transition-shadow duration-300">
+<span class="material-symbols-outlined text-tertiary text-4xl">terminal</span>
+<h4 class="font-headline-sm text-headline-sm text-tertiary">Technical</h4>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-4 py-2 bg-tertiary-container/20 text-on-tertiary-container rounded-full font-label-sm text-label-sm uppercase">Tailwind CSS</span>
+<span class="px-4 py-2 bg-tertiary-container/20 text-on-tertiary-container rounded-full font-label-sm text-label-sm uppercase">Figma Mastery</span>
+<span class="px-4 py-2 bg-tertiary-container/20 text-on-tertiary-container rounded-full font-label-sm text-label-sm uppercase">Semantic HTML</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-outline-variant/20 bg-surface-container-lowest dark:bg-surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-display-lg text-headline-sm text-primary">Carol</span>
+<p class="font-body-md text-body-md text-tertiary">© 2024 Carol. Lifelong Learner.</p>
+</div>
+<nav class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all duration-300" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all duration-300" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:translate-y-[-2px] transition-all duration-300" href="#">Xiaohongshu</a>
+<button class="font-body-md text-body-md text-primary underline decoration-wavy hover:translate-y-[-2px] transition-all duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
+</nav>
+</div>
+</footer>
+<!-- FAB (Suppressed for Profile/About screen as per mandate) -->
+</body></html>

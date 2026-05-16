@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Source+Sans+Three:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.paper-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuApzKBWAclYLMac9ND6es_G5kVAOwFaMY0z4bgitAT1LWuDrcj-dZICp8c-E65kV0runy2NmGWETQQkWuyyWuIA_FPURrF1418c1gwRyPYpMTMUJo8SwCNcyDdT0c5xE5iTkUlx9CoJ2CaVah_QWUCPvg4gocgciPlf92gWVGZdb5BQ77d_0rlZSDXRVTpTt3uV6DiOlEq15WpGCP-rKU8EmY5zE8ETo2xUXmp84ZBGHWzAcecLlFWjezMNsY7Ho2g1psIYfYlIHOA)
+    }
+.meandering-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent 0%, #c5c8bf 50%, transparent 100%);
+    mask-image: url("data:image/svg+xml,%3Csvg width='1200' height='20' viewBox='0 0 1200 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10C50 10 70 2 120 2C170 2 190 18 240 18C290 18 310 10 360 10C410 10 430 2 480 2C530 2 550 18 600 18C650 18 670 10 720 10C770 10 790 2 840 2C890 2 910 18 960 18C1010 18 1030 10 1080 10C1130 10 1150 2 1200 2' stroke='black' stroke-width='1'/%3E%3C/svg%3E");
+    mask-repeat: repeat-x
+    }
+.arch-mask {
+    clip-path: ellipse(50% 100% at 50% 100%);
+    border-radius: 240px 240px 0 0
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb59f",
+                        "tertiary": "#665d52",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#e8f8ea",
+                        "surface-tint": "#55624f",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#793f2d",
+                        "surface-container": "#e3f2e4",
+                        "on-secondary-fixed-variant": "#6f3726",
+                        "tertiary-fixed": "#eee0d3",
+                        "background": "#eefdf0",
+                        "primary-fixed-dim": "#bccbb3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#380d02",
+                        "on-surface": "#121e16",
+                        "secondary-container": "#fdad96",
+                        "on-tertiary-fixed-variant": "#4e453c",
+                        "on-tertiary-container": "#342d24",
+                        "primary-fixed": "#d8e7ce",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#9f9488",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#444841",
+                        "inverse-on-surface": "#e6f5e7",
+                        "on-secondary": "#ffffff",
+                        "primary": "#55624f",
+                        "outline-variant": "#c5c8bf",
+                        "tertiary-fixed-dim": "#d1c4b8",
+                        "secondary": "#8b4e3b",
+                        "on-primary-container": "#263221",
+                        "surface-container-highest": "#d7e6d9",
+                        "surface-bright": "#eefdf0",
+                        "primary-container": "#8c9a84",
+                        "on-tertiary-fixed": "#211a12",
+                        "on-background": "#121e16",
+                        "surface-dim": "#cfded1",
+                        "outline": "#757870",
+                        "inverse-primary": "#bccbb3",
+                        "surface": "#eefdf0",
+                        "surface-variant": "#d7e6d9",
+                        "secondary-fixed": "#ffdbd1",
+                        "inverse-surface": "#26332b",
+                        "on-primary-fixed": "#131e0f",
+                        "surface-container-high": "#ddecdf",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#3e4a38"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "24px",
+                        "section-gap": "120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Source Sans Three"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-sm": ["Source Sans Three"],
+                        "body-md": ["Source Sans Three"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-lg overflow-x-hidden">
+<div class="paper-grain"></div>
+<!-- Navigation Shell -->
+<header class="sticky top-0 w-full z-50 backdrop-blur-[20px] bg-surface/80 dark:bg-surface-dim/80">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter">Carol</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary py-1" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors py-1" href="#">Projects</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors py-1" href="#">About</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors py-1" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:bg-primary-container/10 p-2 rounded-full transition-all">translate</button>
+<button class="md:hidden material-symbols-outlined text-primary">menu</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="min-h-[618px] flex flex-col justify-center items-start pt-20 pb-section-gap">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary max-w-4xl mb-8">
+                Carol is a <span class="italic font-normal">lifelong</span> learner
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                Merging the precision of Fintech with the empathy of Product Management, while exploring the intersection of Science &amp; Mysticism. Building digital experiences that matter.
+            </p>
+<button class="bg-[#C27B66] text-on-primary px-10 py-5 rounded-full font-label-sm uppercase tracking-widest hover:scale-95 transition-all duration-300">
+                View Projects
+            </button>
+</section>
+<!-- Meandering Divider -->
+<div class="meandering-line opacity-50 mb-section-gap"></div>
+<!-- Value Props -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-section-gap">
+<div class="bg-[#DCCFC2] border border-[#E6E2DA] p-10 rounded-lg flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary">Fintech</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Navigating complex financial ecosystems with technical rigor and user-centric clarity.</p>
+</div>
+<div class="bg-[#DCCFC2] border border-[#E6E2DA] p-10 rounded-lg flex flex-col gap-4 md:translate-y-12">
+<span class="material-symbols-outlined text-secondary text-3xl">account_tree</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary">Product Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bridging the gap between business vision and engineering execution through intentional strategy.</p>
+</div>
+<div class="bg-[#DCCFC2] border border-[#E6E2DA] p-10 rounded-lg flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary">Science &amp; Mysticism</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exploring the patterns of the universe, from quantum physics to ancient wisdom.</p>
+</div>
+</section>
+<!-- Meandering Divider -->
+<div class="meandering-line opacity-50 mb-section-gap"></div>
+<!-- Featured Works -->
+<section class="mb-section-gap">
+<h2 class="font-display-lg text-headline-lg text-primary mb-16">Featured Works</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<!-- Project Card 1 -->
+<div class="group">
+<div class="relative w-full aspect-[4/5] bg-surface-container-high rounded-t-full arch-mask overflow-hidden mb-8 border border-outline-variant/30">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An abstract botanical illustration with soft clay and sage green tones, featuring minimalist organic shapes and thin line work. The composition is centered within a vertical arch frame, illuminated by soft morning light, evoking a sense of calm and professional luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2QO0fzH0Efflxm8ZrjlQLRFUFR87aZZCZsv25yM6eihxuVVzYGc1rJxGsjkxDGyOwjJwFIzBIVHyzuVT1l27aQVJfZKzSvAmb_sWklFQ8KDaj_jmxunFuDIKxIt7rabOlB8BSvuyF--FMOlKsMY6wq4DJWwgYkNMkenfv1rXtB05fZ9OBRdr2XqygBm1Z4_XV3FUrhhMbZVaDrFS0oYh0nz6brBuCLcii6HSx3swUOgLAjIP04x0YXG1O6b9nJ_Y-Kc_HJOErIws"/>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary border border-secondary/20 px-3 py-1 rounded-full">Fintech</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary border border-secondary/20 px-3 py-1 rounded-full">Strategy</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary">The Future of Green Banking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A comprehensive redesign of transactional flows for a sustainable-first banking app.</p>
+</div>
+</div>
+<!-- Project Card 2 (Staggered) -->
+<div class="group md:mt-32">
+<div class="relative w-full aspect-[4/5] bg-surface-container-high rounded-t-full arch-mask overflow-hidden mb-8 border border-outline-variant/30">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro photograph of natural rock textures and moss growth, capturing the intricate details of stone and life. The lighting is diffused, emphasizing earthy browns and deep greens. The image is framed by a minimalist arch, creating a sophisticated editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh6bXnSSnTFDm9KMpVcuixioi2I9FDE6mZW5VR3NrsAkAK9cWwnRzjs5IOubWwvclCzkEYpnuBfN_hlJrS4A3QABCzOMHNFgnZLLMqIfmat4cioJhn5JjRj3EgjkdCKjUrj_06Y7fMPCxMpxOKvVaKUmp-c-5mod9qGdMYvL_FBed4qBqAehT_IaHSL0LWOtF1_QpHYObhkQwsOsrVSHvLpG5oE5nXfe5KQ-_Viy2IkpBH0nMxPDwc9R-lvpAZ1oUvPkUtaMNBgQw"/>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary border border-secondary/20 px-3 py-1 rounded-full">Systems</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary border border-secondary/20 px-3 py-1 rounded-full">Lifestyle</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary">Harmonic Rituals</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mapping the daily habits of high-performers through a minimalist tracking interface.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Meandering Divider -->
+<div class="meandering-line opacity-50 mb-section-gap"></div>
+<!-- Latest Insights -->
+<section class="max-w-4xl mx-auto mb-section-gap">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-display-lg text-headline-lg text-primary">Latest Insights</h2>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-primary hover:underline underline-offset-4 transition-all" href="#">See All Writing</a>
+</div>
+<div class="flex flex-col">
+<!-- Insight 1 -->
+<div class="group py-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-12 border-b border-outline-variant/30 hover:bg-surface-container/30 transition-colors px-4 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-32 shrink-0">MAY 14, 2024</span>
+<h4 class="font-headline-sm text-headline-sm text-tertiary grow group-hover:text-primary transition-colors">The Alchemy of Product Feedback</h4>
+<span class="font-label-sm text-label-sm text-outline shrink-0 italic">2-min read</span>
+</div>
+<!-- Insight 2 -->
+<div class="group py-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-12 border-b border-outline-variant/30 hover:bg-surface-container/30 transition-colors px-4 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-32 shrink-0">APR 22, 2024</span>
+<h4 class="font-headline-sm text-headline-sm text-tertiary grow group-hover:text-primary transition-colors">Quantum Mechanics in User Experience</h4>
+<span class="font-label-sm text-label-sm text-outline shrink-0 italic">5-min read</span>
+</div>
+<!-- Insight 3 -->
+<div class="group py-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-12 border-b border-outline-variant/30 hover:bg-surface-container/30 transition-colors px-4 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-32 shrink-0">MAR 08, 2024</span>
+<h4 class="font-headline-sm text-headline-sm text-tertiary grow group-hover:text-primary transition-colors">Designing for Disconnection</h4>
+<span class="font-label-sm text-label-sm text-outline shrink-0 italic">3-min read</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant/20 w-full mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="font-display-lg text-headline-sm text-primary">Carol</div>
+<div class="font-body-md text-body-md text-tertiary text-center md:text-left">© 2024 Carol. Lifelong Learner.</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-y-[-2px] duration-300" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-y-[-2px] duration-300" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-y-[-2px] duration-300" href="#">Xiaohongshu</a>
+<button class="text-primary underline decoration-wavy hover:translate-y-[-2px] transition-transform duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
+</div>
+</div>
+</footer>
+</body></html>

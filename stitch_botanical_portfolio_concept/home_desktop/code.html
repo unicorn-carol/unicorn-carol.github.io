@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#121e16",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "primary-container": "#8c9a84",
+                    "secondary-fixed-dim": "#ffb59f",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#eee0d3",
+                    "on-error": "#ffffff",
+                    "tertiary": "#665d52",
+                    "on-secondary-fixed": "#380d02",
+                    "surface-bright": "#eefdf0",
+                    "on-secondary-container": "#793f2d",
+                    "outline-variant": "#c5c8bf",
+                    "on-tertiary-fixed": "#211a12",
+                    "on-primary-fixed-variant": "#3e4a38",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#e8f8ea",
+                    "primary": "#55624f",
+                    "surface-variant": "#d7e6d9",
+                    "surface-container-highest": "#d7e6d9",
+                    "on-surface-variant": "#444841",
+                    "on-tertiary-fixed-variant": "#4e453c",
+                    "surface-tint": "#55624f",
+                    "primary-fixed-dim": "#bccbb3",
+                    "background": "#eefdf0",
+                    "surface-container": "#e3f2e4",
+                    "on-error-container": "#93000a",
+                    "outline": "#757870",
+                    "on-surface": "#121e16",
+                    "tertiary-container": "#9f9488",
+                    "secondary": "#8b4e3b",
+                    "inverse-primary": "#bccbb3",
+                    "surface-dim": "#cfded1",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fdad96",
+                    "inverse-on-surface": "#e6f5e7",
+                    "surface-container-high": "#ddecdf",
+                    "on-primary-container": "#263221",
+                    "on-secondary-fixed-variant": "#6f3726",
+                    "inverse-surface": "#26332b",
+                    "secondary-fixed": "#ffdbd1",
+                    "primary-fixed": "#d8e7ce",
+                    "tertiary-fixed-dim": "#d1c4b8",
+                    "surface": "#eefdf0",
+                    "on-tertiary-container": "#342d24",
+                    "on-primary-fixed": "#131e0f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px"
+            },
+            "fontFamily": {
+                    "display": ["Playfair Display", "serif"],
+                    "body": ["Source Sans 3", "sans-serif"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Source Sans 3"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-sm": ["Source Sans 3"],
+                    "display-lg": ["Playfair Display"],
+                    "body-md": ["Source Sans 3"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDHtTa4iljAY_h4_6sSHfhBdrQdpSreSYp9L-b9RCo4lTyH2OK05WNbSf-4s97PnMl-xIuRHWg1NhGwpDcrf1I3bzmVdIxcxuhhuT08MpE4dCN83U7jLgbc9L3NbOiyssgp7Vk3DPvyxlnWQrRHA8FyNfajjdRd7K66gGSA_u8wvkjSM2uNzTJey6VBQSnXK5q3bOPgVnGN0FZCrWQw5JDMoBUVKGuvs0ZB0t2YNKEp1D-6KvRuiE8PSoGopbvewItqdPAm-iJHuEg)
+    }
+.meandering-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c5c8bf 50%, transparent);
+    width: 100%;
+    position: relative
+    }
+.arch-mask {
+    clip-path: ellipse(50% 100% at 50% 100%)
+    }
+.blob-mask {
+    border-radius: 40% 60% 70% 30%/40% 50% 60% 50%
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 backdrop-blur-[20px] bg-surface/80 dark:bg-surface-dim/80">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter">Carol</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors" href="#">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors" href="#">Insights</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="translate">translate</span>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col justify-center py-section-gap">
+<div class="max-w-4xl">
+<p class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary mb-6">Digital Curator &amp; Designer</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg italic leading-tight text-on-background">
+                    Designing <span class="text-primary italic">intentional</span> spaces for the <span class="font-normal font-headline-lg">sustainable</span> future of the digital world.
+                </h1>
+<div class="mt-12 flex flex-col md:flex-row items-start md:items-center gap-8">
+<button class="bg-secondary text-on-secondary rounded-full px-10 py-5 font-bold hover:scale-95 transition-all duration-300">
+                        View Selected Works
+                    </button>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xs">
+                        A practice rooted in slow design, tactile textures, and high-end editorial precision.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Value Prop Section -->
+<section class="py-section-gap overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-high p-8 rounded-lg border border-outline-variant/30 flex flex-col gap-6 hover:translate-y-[-4px] transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="eco">eco</span>
+<h3 class="font-headline-sm text-headline-sm">Organic Softness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Interactions designed with a natural flow, avoiding the rigid constraints of traditional digital grids for a more human experience.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-high p-8 rounded-lg border border-outline-variant/30 flex flex-col gap-6 hover:translate-y-[-4px] transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="auto_stories">auto_stories</span>
+<h3 class="font-headline-sm text-headline-sm">Editorial Intent</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">High-contrast typography and expansive whitespace that mimics the pacing and prestige of a premium luxury art publication.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-high p-8 rounded-lg border border-outline-variant/30 flex flex-col gap-6 hover:translate-y-[-4px] transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="texture">texture</span>
+<h3 class="font-headline-sm text-headline-sm">Natural Texture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pervasive paper-grain overlays and tonal layering create a tactile "tooth" to the screen, reducing digital fatigue.</p>
+</div>
+</div>
+</section>
+<div class="meandering-divider my-section-gap"></div>
+<!-- Featured Works (Staggered Grid) -->
+<section class="py-section-gap">
+<div class="flex justify-between items-end mb-16">
+<div>
+<p class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary mb-2">Narratives</p>
+<h2 class="font-headline-lg text-headline-lg">Selected Projects</h2>
+</div>
+<a class="font-body-md text-body-md text-primary flex items-center gap-2 group" href="#">
+                    Browse all archive <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-24 md:gap-y-32">
+<!-- Project 1 -->
+<div class="md:col-span-7 group">
+<div class="aspect-[4/5] bg-surface-container-low rounded-t-full overflow-hidden relative mb-8 border border-outline-variant/20">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-tertiary-container/30"></div>
+<img class="w-full h-full object-cover mix-blend-overlay opacity-60 transition-transform duration-700 group-hover:scale-105" data-alt="A serene landscape with rolling hills in a soft misty fog, shot in high-key morning light. The color palette features muted sage greens and soft alabaster whites. The composition is artistic and minimalist, evoking a sense of calm and sustainable luxury within a botanical motif frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgowcGOQ2WXETBpBVBrIjM3LzdF_01oz0IA0oPusKDNv2NMVqGLQTuk0M-onBVHxjRvbrf_bd-CAfdDeAlvPnOJTr5TwtTWdFNzzLxvJKU1UckGK6ne3kf7loKa9rH_ePSYvFlfJ4Y3crYUYh4wIiaRwNKmgUcIQI3AoP038xXQ8sC5z_8kCIQVwkE7crXM_YWGxwxZozeMjZ6QlINf3E7odUZcxqQ-Y3mRrJ--c4It0Oyjog9lhNjtBrcoHD1z_i2cySa7k448uc"/>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mb-2">01 — DIGITAL EXPERIENCE</p>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">The Alabaster Archive</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">An exploration of minimal architectural forms translated into a tactile digital navigation system.</p>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-4 md:col-start-9 md:pt-32 group">
+<div class="aspect-square bg-surface-container-low blob-mask overflow-hidden relative mb-8 border border-outline-variant/20">
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary-container/20 to-tertiary-fixed/30"></div>
+<img class="w-full h-full object-cover mix-blend-multiply opacity-50 transition-transform duration-700 group-hover:scale-105" data-alt="Close-up macro photography of delicate botanical veins and leaf structures, illuminated by warm, golden hour light. The aesthetic is tactile and rich in organic detail, utilizing a warm terracotta and soft clay color palette. The image feels like a high-end editorial spread from a sustainable design journal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg8pqMR9uMmPzV3vRq-2cudMsvZXZ74OMT6lPtcgKMB5eRV_RV4B9qmUWQIrYt7DurJ0yhkVZf2YGXfdYBuxO929Ceejz5Q3TRXOFPx6wpynAxoOTrragnFwOeRbu-RsxVygyKh1S-Lc-QnKElnL8ZIu3KjBR6lrS4hgM9JXbl_x0LVVwfoS2gKBFAefyxbJvmanDe5e4YdLbZcT_npAoPmrvr5yexZpdhSLumWiDFauiPS4eoWUuXSm5hvG2UQCZ9u0k2sDyrDdQ"/>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mb-2">02 — BRAND IDENTITY</p>
+<h3 class="font-headline-sm text-headline-sm mb-2 group-hover:text-primary transition-colors">Flora &amp; Form</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A tactile identity system for a sustainable architecture collective in Northern Scandinavia.</p>
+</div>
+</div>
+</section>
+<!-- Insights Section -->
+<section class="py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg sticky top-32">Latest<br/><span class="italic">Insights</span></h2>
+</div>
+<div class="md:col-span-8 flex flex-col gap-0">
+<!-- Article 1 -->
+<a class="group border-b border-outline-variant/30 py-10 flex justify-between items-center hover:px-4 transition-all duration-300" href="#">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">OCT 2024 — SUSTAINABILITY</span>
+<h4 class="font-headline-sm text-headline-sm group-hover:text-secondary transition-colors">The Case for Slow Digital Design</h4>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="arrow_outward">arrow_outward</span>
+</a>
+<!-- Article 2 -->
+<a class="group border-b border-outline-variant/30 py-10 flex justify-between items-center hover:px-4 transition-all duration-300" href="#">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SEP 2024 — TYPOGRAPHY</span>
+<h4 class="font-headline-sm text-headline-sm group-hover:text-secondary transition-colors">Pairing Playfair for the Modern Web</h4>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="arrow_outward">arrow_outward</span>
+</a>
+<!-- Article 3 -->
+<a class="group border-b border-outline-variant/30 py-10 flex justify-between items-center hover:px-4 transition-all duration-300" href="#">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">AUG 2024 — UX</span>
+<h4 class="font-headline-sm text-headline-sm group-hover:text-secondary transition-colors">Tactile Interfaces in a Flat World</h4>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-start w-full py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="max-w-md">
+<span class="font-display-lg text-headline-sm text-primary mb-6 block">Carol</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                    Let's create something intentional. Currently accepting new projects and collaborations with sustainable-focused brands.
+                </p>
+<button class="border-b-2 border-secondary text-secondary pb-1 font-bold hover:text-primary hover:border-primary transition-all">
+                    hello@carol-design.com
+                </button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Connect</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Xiaohongshu</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Studio</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Work</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Archive</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Insights</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Case Studies</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/10 flex justify-between items-center text-on-surface-variant/60 font-body-md text-[14px]">
+<span>© 2024 Carol. Lifelong Learner.</span>
+<span>Hand-curated digital design.</span>
+</div>
+</footer>
+</body></html>
